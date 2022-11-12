@@ -1,0 +1,14 @@
+body{
+    background-color: salmon;
+}
+
+.favorite-btn{
+    width: 30px;
+    height: 30px;
+    background-color: aqua;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+}

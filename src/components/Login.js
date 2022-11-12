@@ -1,11 +1,10 @@
 import React from "react";
 import axios from "axios";
 import swal from "@sweetalert/with-react";
-import {useNavigate} from "react-router-dom"
+import { useNavigate, Navigate } from "react-router-dom";
 
 const Login = () => {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -28,20 +27,22 @@ const Login = () => {
       swal(<h2>las credenciales no son correctas</h2>);
       return;
     }
-    console.log("estamos listos");
+
     axios
       .post("http://challenge-react.alkemy.org", { email, password })
       .then((res) => {
         swal(<h2>perfecto, ingresaste!!</h2>);
         const token = res.data.token;
-        localStorage.setItem("token", token);
-       navigate('/listado')
+        sessionStorage.setItem("token", token);
+        navigate("/listado");
         console.log(token);
       });
   };
+
+  const token = sessionStorage.getItem('token')
   return (
     <>
-    
+    {token && <Navigate to='/listado'/>}
       <h2>Formulario de Login</h2>
       <form onSubmit={submitHandler}>
         <label>
