@@ -55,7 +55,7 @@ const Login = () => {
               </div>
               <div className="d-flex flex-column my-3">
                 <label>Ingrese su contraseña</label>
-                <input type="password" name="password" value="react" />
+                <input type="password" name="password"  />
               </div>
               <button type="submit">Click</button>
             </form>
