@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import swal from "@sweetalert/with-react";
 import { useNavigate, Navigate } from "react-router-dom";
+import "../css/login.css";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -39,23 +40,29 @@ const Login = () => {
       });
   };
 
-  const token = sessionStorage.getItem('token')
+  const token = sessionStorage.getItem("token");
   return (
-    <>
-    {token && <Navigate to='/listado'/>}
-      <h2>Formulario de Login</h2>
-      <form onSubmit={submitHandler}>
-        <label>
-          Ingrese su email
-          <input type="email" name="email" />
-        </label>
-        <label>
-          Ingrese su contraseña
-          <input type="password" name="password" />
-        </label>
-        <button type="submit">Ingresar</button>
-      </form>
-    </>
+    <section className="section-login">
+      <div className="container login">
+        {token && <Navigate to="/listado" />}
+        <div className="row ">
+          <div className="col-md-12 d-flex justify-content-center">
+            <form onSubmit={submitHandler}>
+              <h2 className="text-center">Iniciar Sesión</h2>
+              <div className="d-flex flex-column my-3">
+                <label>Ingrese su email</label>
+                <input type="email" name="email" value="challenge@alkemy.org" />
+              </div>
+              <div className="d-flex flex-column my-3">
+                <label>Ingrese su contraseña</label>
+                <input type="password" name="password" value="react" />
+              </div>
+              <button type="submit">Click</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
