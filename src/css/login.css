@@ -37,7 +37,7 @@
   animation: back;
   color: #010101;
 }
-.login .row form button::before {
+/* .login .row form button::before {
   content: "Ingresar";
   height: 100%;
   width: 100%;
@@ -54,4 +54,4 @@
 }
 .login .row form button:hover::before {
   transform: translateX(0);
-}
+} */
