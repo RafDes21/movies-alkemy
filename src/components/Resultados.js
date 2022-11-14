@@ -3,7 +3,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import swal from "@sweetalert/with-react";
+
 
 export const Resultados = () => {
   const [searchParams] = useSearchParams();
@@ -18,7 +18,7 @@ export const Resultados = () => {
     const moviesQuery = res.data.results;
 
     if (moviesQuery.length === 0) {
-      swal(<h5>Tu busqueda no arrojo resultados</h5>);
+      alert("Tu busqueda no arrojo resultados")
     }
     setMovie(moviesQuery);
   };

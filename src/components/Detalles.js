@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Navigate, useParams } from "react-router-dom";
-import swal from "@sweetalert/with-react";
+
 
 const Detalles = () => {
   const [movie, setMovie] = useState([]);
@@ -16,7 +16,7 @@ const Detalles = () => {
       setMovie(res.data);
       console.log(res.data);
     } catch (error) {
-      swal(<h2>pelicula no encontrada</h2>);
+     alert("pelicula no encontrada")
     }
   };
   useEffect(() => {

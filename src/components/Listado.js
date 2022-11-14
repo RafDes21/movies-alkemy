@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
-import swal from "@sweetalert/with-react";
+
 import { BsHeartFill } from "react-icons/bs";
 
 const Listado = (props) => {
@@ -19,7 +19,7 @@ const Listado = (props) => {
       const res = await axios.get(url);
       setMovies(res.data.results);
     } catch (error) {
-      swal(<h3>hubo un error, intenta más tarde</h3>);
+      alert("hubo un error, intenta más tarde");
     }
   };
   useEffect(() => {
@@ -32,16 +32,17 @@ const Listado = (props) => {
       <div className="container mt-5">
         <div className="row mt-5">
           {movies.map((movie, index) => (
-            <div className="col-md-4 col-lg-3 col-12 col-sm-6 py-4 mt-5" key={index}>
+            <div
+              className="col-md-4 col-lg-3 col-12 col-sm-6 py-4 mt-5"
+              key={index}
+            >
               <div className="card">
                 <img
                   className="card-img-top"
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   alt={movie.title}
-                  
                 />
                 <div className="card-body">
-                  
                   <h1>{movie.title.substring(0, 10)}...</h1>
                   <p>{movie.overview.substring(0, 100)}...</p>
                   <Link
@@ -51,9 +52,13 @@ const Listado = (props) => {
                     Click
                   </Link>
                 </div>
-                <button className="favorite-btn" onClick={props.addRemoveFavorite} data-movie-id = {movie.id}>
-                    <BsHeartFill />
-                  </button>
+                <button
+                  className="favorite-btn"
+                  onClick={props.addRemoveFavorite}
+                  data-movie-id={movie.id}
+                >
+                  <BsHeartFill />
+                </button>
               </div>
             </div>
           ))}
