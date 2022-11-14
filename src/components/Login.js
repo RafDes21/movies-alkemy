@@ -51,7 +51,7 @@ const Login = () => {
               <h2 className="text-center">Iniciar Sesión</h2>
               <div className="d-flex flex-column my-3">
                 <label>Ingrese su email</label>
-                <input type="email" name="email" value="challenge@alkemy.org" />
+                <input type="email" name="email" />
               </div>
               <div className="d-flex flex-column my-3">
                 <label>Ingrese su contraseña</label>
