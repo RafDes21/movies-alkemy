@@ -1,11 +1,13 @@
 
 import axios from "axios";
+
 import swal from "@sweetalert/with-react";
 import { useNavigate, Navigate } from "react-router-dom";
 import "../css/login.css";
 
 const Login = () => {
   const navigate = useNavigate();
+ 
   const submitHandler = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -30,7 +32,7 @@ const Login = () => {
     }
 
     axios
-      .post("https://challenge-react.alkemy.org", { email, password })
+      .post("http://challenge-react.alkemy.org", { email, password })
       .then((res) => {
         swal(<h2>perfecto, ingresaste!!</h2>);
         const token = res.data.token;
@@ -38,6 +40,23 @@ const Login = () => {
         navigate("/listado");
         console.log(token);
       });
+
+      // const instance = axios.create({
+        
+      //   httpsAgent: new https.Agent({  
+      //     rejectUnauthorized: false
+      //   })
+      // });
+      // const res =  instance.post("http://challenge-react.alkemy.org", { email, password });
+      // console.log(res)
+      // .then((res) => {
+      //   swal(<h2>perfecto, ingresaste!!</h2>);
+      //   const token = res.data.token;
+      //   sessionStorage.setItem("token", token);
+      //   navigate("/listado");
+      //   console.log(token);
+      // });
+      
   };
 
   const token = sessionStorage.getItem("token");
