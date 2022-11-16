@@ -2,6 +2,7 @@
   "name": "movies-alkemy",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     
     "axios": "^1.1.3",
