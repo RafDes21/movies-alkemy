@@ -1,12 +1,12 @@
 import axios from "axios";
-import https from "https";
+import https from "https"
 import { useNavigate, Navigate } from "react-router-dom";
 import "../css/login.css";
 
 const Login = () => {
   const navigate = useNavigate();
 console.log(https)
-  const submitHandler = async (e) => {
+  const submitHandler = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
@@ -29,16 +29,26 @@ console.log(https)
       return;
     }
 
-    const instance = axios.create({
-      httpsAgent: new https.Agent({
-        rejectUnauthorized: false,
-      }),
-    });
-    const res = await instance.post("http://challenge-react.alkemy.org", {
-      email,
-      password,
-    });
-    console.log(res);
+    axios
+      .post("http://challenge-react.alkemy.org", { email, password })
+      .then((res) => {
+        alert("perfecto, ingresaste!!");
+        const token = res.data.token;
+        sessionStorage.setItem("token", token);
+        navigate("/listado");
+        console.log(token);
+      });
+
+    // const instance = axios.create({
+    //   httpsAgent: new https.Agent({
+    //     rejectUnauthorized: false,
+    //   }),
+    // });
+    // const res = await instance.post("http://challenge-react.alkemy.org", {
+    //   email,
+    //   password,
+    // });
+    // console.log(res);
   };
 
   const token = sessionStorage.getItem("token");
