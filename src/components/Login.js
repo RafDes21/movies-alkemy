@@ -1,11 +1,11 @@
 import axios from "axios";
-import https from "https"
+
 import { useNavigate, Navigate } from "react-router-dom";
 import "../css/login.css";
 
 const Login = () => {
   const navigate = useNavigate();
-console.log(https)
+
   const submitHandler = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
