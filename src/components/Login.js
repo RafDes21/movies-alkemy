@@ -1,5 +1,5 @@
 import axios from "axios";
-import https from "https"
+import https from "https";
 import { useNavigate, Navigate } from "react-router-dom";
 import "../css/login.css";
 
@@ -38,7 +38,7 @@ console.log(https)
       email,
       password,
     });
-    console.log(res.data);
+    console.log(res);
   };
 
   const token = sessionStorage.getItem("token");
