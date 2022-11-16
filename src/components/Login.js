@@ -1,4 +1,3 @@
-import axios from "axios";
 
 
 import { useNavigate, Navigate } from "react-router-dom";
@@ -6,6 +5,7 @@ import "../css/login.css";
 
 const Login = () => {
   const navigate = useNavigate();
+  const tok = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwiZW1haWwiOiJjaGFsbGVuZ2VAYWxrZW15Lm9yZyIsImlhdCI6MTUxNjIzOTAyMn0.ilhFPrG0y7olRHifbjvcMOlH7q2YwlegT0f4aSbryBE"
 
 
   const submitHandler = (e) => {
@@ -30,16 +30,17 @@ const Login = () => {
       alert("las credenciales no son correctas");
       return;
     }
+    sessionStorage.setItem("token", tok)
+    navigate("/listado");
 
-    axios
-      .post("http://challenge-react.alkemy.org", { email, password })
-      .then((res) => {
-        alert("perfecto, ingresaste!!");
-        const token = res.data.token;
-        sessionStorage.setItem("token", token);
-        navigate("/listado");
-        console.log(token);
-      });
+    // axios
+    //   .post("http://challenge-react.alkemy.org", { email, password })
+    //   .then((res) => {
+    //     alert("perfecto, ingresaste!!");
+    //     const token = res.data.token;
+    //     sessionStorage.setItem("token", token);
+    //     console.log(token);
+    //   });
 
     // const instance = axios.create({
     //   httpsAgent: new https.Agent({
