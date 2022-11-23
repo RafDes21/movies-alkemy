@@ -4,20 +4,22 @@ import { useEffect, useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 
 import { BsHeartFill } from "react-icons/bs";
+import Slider from "../components/Slider";
 
 const Listado = (props) => {
   const [movies, setMovies] = useState([]);
   const token = sessionStorage.getItem("token");
 
-  console.log(props);
+  
 
   const url =
-    "https://api.themoviedb.org/3/discover/movie?api_key=e7e16089afd28414ef3120b577232770&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate";
+    "https://api.themoviedb.org/3/discover/movie?api_key=e7e16089afd28414ef3120b577232770&page=1&sort_by=popularity.desc";
 
   const lista = async () => {
     try {
       const res = await axios.get(url);
       setMovies(res.data.results);
+ 
     } catch (error) {
       alert("hubo un error, intenta más tarde");
     }
@@ -29,6 +31,7 @@ const Listado = (props) => {
   return (
     <>
       {!token && <Navigate to="/" />}
+      <Slider/>
       <div className="container mt-5">
         <div className="row mt-5">
           {movies.map((movie, index) => (

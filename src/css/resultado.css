@@ -1,0 +1,33 @@
+.results {
+  padding-top: 100px;
+}
+.not{
+  position: relative;
+
+}
+.sinResults {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 0;
+  
+}
+.sinResults .off{
+  width: 200px;
+  z-index: 2;
+  filter: drop-shadow(5px 7px 8px #5c0d0d);
+}
+.sinResults h1{
+  z-index: 2;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 2px 4px 7px #010101;
+}
+.sinResults .tablet{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+}

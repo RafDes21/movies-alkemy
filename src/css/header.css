@@ -1,10 +1,12 @@
 .header {
-  height: 100px;
+  height: 90px;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 2;
-  
+  background: linear-gradient(#141414, #14141410 98%);
+  transition: all 0.5s;
+  color: #ffff;
 }
 .header nav ul {
   display: flex;
@@ -12,8 +14,13 @@
   margin: revert;
   gap: 50px;
   padding: 0;
+  
+  transform: translateX(-70%);
 }
 .header nav ul li {
   list-style: none;
 }
-
+.header .logo {
+  width: 150px;
+  filter: drop-shadow(2px 5px 6px #5c0d0d);
+}

@@ -3,7 +3,10 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
-
+import "../css/resultado.css";
+import Card from "./Card";
+import serch from '../assets/serch.png'
+import tablet from "../assets/tablet.jpg"
 
 export const Resultados = () => {
   const [searchParams] = useSearchParams();
@@ -18,7 +21,6 @@ export const Resultados = () => {
     const moviesQuery = res.data.results;
 
     if (moviesQuery.length === 0) {
-      alert("Tu busqueda no arrojo resultados")
     }
     setMovie(moviesQuery);
   };
@@ -34,13 +36,28 @@ export const Resultados = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
   return (
-    <>
-      <div>vas a buscar: {keyword}</div>
-      {movie.length === 0 ? (
-        <h1>no hubo resultados</h1>
-      ) : (
-        movie.map((movie, index) => <h1 key={index}>{movie.title}</h1>)
-      )}
-    </>
+    <div className="not">
+    <div className="container results">
+      <h2>
+        Resultados de tu busqueda:
+        {movie.length === 0 ? "no hay resultados" : keyword}
+      </h2>
+      <div className="row">
+        {movie.length === 0 ? (
+          <div className="sinResults">
+            <img className="off" src={serch} alt='sin results'/>
+            <h1>No se encontró lo que buscabas</h1>
+            <img className="tablet" src={tablet} alt='tablet'/>
+          </div>
+        ) : (
+          movie.map((movie, index) => (
+            <div className="col-md-2 my-2">
+              <Card key={index} name={movie.title} img={movie.poster_path} />
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+    </div>
   );
 };

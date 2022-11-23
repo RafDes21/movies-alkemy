@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import { Routes, Route } from "react-router-dom";
 
 //components
-import Listado from "./components/Listado";
+import Listado from "./Pages/Listado";
 import Login from "./components/Login";
 import { Layout } from "./layout/Layout";
 import Detalles from "./components/Detalles";
@@ -12,6 +12,8 @@ import { Favoritos } from "./components/Favoritos";
 //styles
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/app.css";
+import Perfil from "./components/Perfil";
+import { Movies } from "./Pages/Movies";
 
 function App() {
 
@@ -23,7 +25,7 @@ function App() {
     if (fvs !== null) {
       const fvsArray = JSON.parse(fvs);
       setFavoritos(fvsArray);
-      console.log(fvsArray);
+     
     }
   }, []);
 
@@ -72,8 +74,10 @@ function App() {
   return (
     <>
       <Routes>
+          <Route path="/perfiles" element={<Perfil/>} />
         <Route path="/" element={<Layout favoritos = {favoritos} />}>
           <Route index element={<Login />} />
+          <Route path="/movies" element={<Movies/>}/>
           <Route path="/listado" element={<Listado addRemoveFavorite={addRemoveFavorite} />}/>
           <Route path="/resultados" element={<Resultados />} />
           <Route path="/favoritos" element={<Favoritos favoritos = {favoritos} addRemoveFavorite = {addRemoveFavorite} />} />

@@ -1,0 +1,37 @@
+.browse {
+  padding: 150px 0;
+}
+.browse h1 {
+  font-size: 50px;
+}
+.browse button {
+  display: flex;
+  justify-content: center;
+  color: #808080;
+  margin: 40px auto;
+  padding: 10px 40px;
+  border: 1px solid #808080;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.browse button:hover{
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+.perfil {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(165, 42, 42, 0.742);
+}
+.perfiles h5{
+  color: #ffffff;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.perfil img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

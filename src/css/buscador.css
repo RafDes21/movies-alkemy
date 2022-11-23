@@ -1,0 +1,38 @@
+.serch {
+  border: 0.5px solid #fff;
+  border-radius: 3px;
+  background-color: #01010150;
+}
+.serch form button {
+  background: none;
+  color: #fff;
+  border: none;
+}
+.serch form input {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.serch form label input::placeholder {
+  color: #fff;
+  padding: 5px 10px;
+}
+form select:focus {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.serch form input:focus {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.serch form button .serch-icon{
+    
+   margin-right: 10px;
+   font-size: 20px;
+}

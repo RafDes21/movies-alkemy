@@ -1,0 +1,23 @@
+.cards{
+    height: 300px;
+    width: 200px;
+    overflow: hidden;
+    border: 1px solid #010101;
+    border-radius: 8px;
+}
+
+.cards-img{
+    height: 80%;
+    width: 100%;
+}
+.cards-img img{
+    height: 100%;
+    width: 100%;
+}
+.cards-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
