@@ -1,4 +1,4 @@
-.cards{
+.card{
     height: 300px;
     width: 200px;
     overflow: hidden;
@@ -6,15 +6,15 @@
     border-radius: 8px;
 }
 
-.cards-img{
+.card-img{
     height: 80%;
     width: 100%;
 }
-.cards-img img{
+.card-img img{
     height: 100%;
     width: 100%;
 }
-.cards-body{
+.card-body{
     display: flex;
     justify-content: center;
     align-items: center;
