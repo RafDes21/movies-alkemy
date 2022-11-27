@@ -14,7 +14,7 @@ root.render(
   <StrictMode>
     <BrowserRouter>
       <Provider store={store}>
-        <App />
+        <App/>
       </Provider>
     </BrowserRouter>
   </StrictMode>

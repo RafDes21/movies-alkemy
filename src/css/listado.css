@@ -1,43 +1,39 @@
 .listado {
   background-color: #181818;
-  overflow: hidden;
-  position: relative;
 }
 .list-groups {
   margin-top: -110px;
+  z-index: 2;
+  position: relative;
 }
 .section {
   height: 250px;
+  position: relative;
 }
 .section h3 {
   padding: 10px 0;
   color: #fff;
   font-weight: bold;
-  position: relative;
+  padding-left: 100px;
+  /* position: relative; */
 }
 
 .contain-cards {
-  position: absolute;
   display: flex;
-  gap: 10px;
-  left: 0;
-  transform: translateX(100px);
+  /* padding-left: 100px; */
 }
 .arrow {
   color: #fff;
-  z-index: 4;
-  position: relative;
- background-color: #01010180;
-  display: block;
-  font-size: 25px;
   position: absolute;
-  width: 50px;
+  font-size: 30px;
+  padding: 10px;
   height: 160px;
-  padding: 0 10px;
+  width: 50px;
+  top: 25%;
+  z-index: 5;
+  background-color: #01010180;
+  cursor: pointer;
 }
 .arrow-right {
-  right: 10px;
-}
-.arrow-left {
-  left: 0;
+  right: 0;
 }

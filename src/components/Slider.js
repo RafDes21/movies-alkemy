@@ -7,7 +7,7 @@ const Slider = () => {
   const automatic = async () => {
     const element = await next.current.children[0];
     next.current.style.transition = `5000ms ease-out all`;
-    const size = next.current.children[0].offsetWidth;
+     const size = next.current.children[0].offsetWidth;
     next.current.style.transform = `translateX(-${size}px)`;
     const transition = () => {
       next.current.style.transition = "none";
