@@ -1,5 +1,6 @@
 .listado {
   background-color: #181818;
+  
 }
 .list-groups {
   margin-top: -110px;
@@ -21,6 +22,8 @@
 .contain-cards {
   display: flex;
   /* padding-left: 100px; */
+
+
 }
 .arrow {
   color: #fff;

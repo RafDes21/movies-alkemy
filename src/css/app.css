@@ -3,8 +3,11 @@
 :root {
   --font-primary: "Jost", sans-serif;
   --font-secondary: "Oleo Script", cursive;
+  
 }
-
+#root{
+  overflow: hidden;
+}
 body {
   font-family: var(--font-primary);
   height: 100vh;
