@@ -9,8 +9,7 @@
   transition: all 0.5s;
   width: 300px;
   height: 160px;
-  /* z-index: 5;
-  position: relative; */
+  
 }
 .cards:hover {
   border-radius: 5px;

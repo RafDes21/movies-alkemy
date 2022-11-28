@@ -35,17 +35,17 @@ export const Header = (favoritos) => {
             <ul>
               <li>
                 <Link className="nav-link" to={"/listado"}>
-                  Inicio
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link className="nav-link" to={"/series"}>
+                  Series
                 </Link>
               </li>
               <li>
                 <Link className="nav-link" to={"/movies"}>
                   Películas
-                </Link>
-              </li>
-              <li>
-                <Link className="nav-link" to={"/listado"}>
-                  Listado
                 </Link>
               </li>
 

@@ -24,7 +24,7 @@ const Login = () => {
       return;
     }
 
-    if (email !== "challenge@alkemy.org" || password !== "react") {
+    if (email !== "israeltineo84@gmail.com" || password !== "react") {
       alert("las credenciales no son correctas");
       return;
     }

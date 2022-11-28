@@ -1,7 +1,7 @@
 .listado {
   background-color: #181818;
-  
 }
+
 .list-groups {
   margin-top: -110px;
   z-index: 2;
@@ -16,14 +16,11 @@
   color: #fff;
   font-weight: bold;
   padding-left: 100px;
-  /* position: relative; */
 }
 
 .contain-cards {
   display: flex;
-  /* padding-left: 100px; */
-
-
+  padding-left: 100px;
 }
 .arrow {
   color: #fff;
@@ -32,7 +29,7 @@
   padding: 10px;
   height: 160px;
   width: 50px;
-  top: 25%;
+  top: 24.5%;
   z-index: 5;
   background-color: #01010180;
   cursor: pointer;
@@ -40,3 +37,6 @@
 .arrow-right {
   right: 0;
 }
+/* .arrow-left {
+  opacity: 0;
+} */

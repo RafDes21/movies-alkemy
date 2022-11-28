@@ -7,9 +7,9 @@ const Card = ({ name, img, description }) => {
       <div className="card-img">
         <img src={`https://image.tmdb.org/t/p/w500/${img}`} alt={name} />
       </div>
-      <div className="card-body">
+      {/* <div className="card-body">
         <h5 className="text-center">{name}</h5>
-      </div>
+      </div> */}
     </div>
   );
 };

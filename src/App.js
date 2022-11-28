@@ -14,6 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/app.css";
 import Perfil from "./components/Perfil";
 import { Movies } from "./Pages/Movies";
+import Series from "./Pages/Series";
 
 function App() {
 
@@ -78,6 +79,7 @@ function App() {
         <Route path="/" element={<Layout favoritos = {favoritos} />}>
           <Route index element={<Login />} />
           <Route path="/movies" element={<Movies/>}/>
+          <Route path="/series" element={<Series/>}/>
           <Route path="/listado" element={<Listado addRemoveFavorite={addRemoveFavorite} />}/>
           <Route path="/resultados" element={<Resultados />} />
           <Route path="/favoritos" element={<Favoritos favoritos = {favoritos} addRemoveFavorite = {addRemoveFavorite} />} />

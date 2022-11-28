@@ -3,7 +3,7 @@
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 2;
+  z-index: 5;
   background: linear-gradient(#141414, #14141410 98%);
   transition: all 0.5s;
   color: #ffff;
