@@ -2,64 +2,13 @@
   background-color: #181818;
   position: relative;
 }
-.movieContainer .container{
-  margin-top: -100px;
+.movieContainer .container {
+  margin-top: 1px;
 }
-/* .categories {
-  margin-top: 100px;
+
+.movieContainer .movies-serch {
+  border: 1px solid green;
   position: absolute;
-  top: 1%;
-  left: 10%;
-  color: #fff;
+  top: 0;
+  left: 5%;
 }
-.categories-title {
-  font-size: 50px;
-  font-weight: bold;
-}
-.categories-search {
-  padding: 8px 20px;
-  border: 1px solid #010101;
-  border-radius: 5px;
-  cursor: pointer;
-position: relative;
-}
-.categories-list {
-  position: absolute;
-  height: 0;
-  width: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #01010198;
-  padding: 0;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  top: 58px;
-  left: 65%;
-  overflow: hidden;
-  transition: all 0.5s;
-}
-.categories-list li {
-  width: 100px;
-  color: #ffff;
-  font-size: 15px;
-  list-style: none;
-  cursor: pointer;
-  overflow: hidden;
-}
-.categories-list li span {
-  position: relative;
-}
-.categories-list li span::after {
-  content: "";
-  position: absolute;
-  border-bottom: 1.5px solid #fff;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  transform: translateX(-101%);
-}
-.categories-list li span:hover::after {
-  transform: translateX(0);
-  transition: all 0.5s;
-} */

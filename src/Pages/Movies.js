@@ -44,13 +44,15 @@ export const Movies = () => {
             name={movie.title}
             description={movie.overview}
           />
-          <SerchCategory title={title} cat={category} get={getId} />
+          <div className="movies-serch">
+            <SerchCategory title={title} cat={category} get={getId} />
+          </div>
           <div className="container">
             <div className="movie-list row">
               {categories.length === 0 ? (
                 <>
                   {movies.map((item, index) => (
-                    <div className="col-md-2 my-5">
+                    <div className="col-12 col-sm-6 col-md-4 col-lg-3 my-5 d-flex justify-content-center">
                       <Card
                         key={index}
                         name={item.title}
@@ -63,7 +65,7 @@ export const Movies = () => {
               ) : (
                 <>
                   {categories.map((item, index) => (
-                    <div className="col-md-2 my-5">
+                    <div className="col-12 col-sm-6 col-md-4 col-lg-3 my-5 d-flex justify-content-center">
                       <Card
                         key={index}
                         name={item.title}

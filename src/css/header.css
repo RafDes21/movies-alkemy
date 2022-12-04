@@ -14,7 +14,7 @@
   margin: revert;
   gap: 50px;
   padding: 0;
-  
+
   transform: translateX(-70%);
 }
 .header nav ul li {
@@ -23,4 +23,27 @@
 .header .logo {
   width: 150px;
   filter: drop-shadow(2px 5px 6px #5c0d0d);
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  .header nav{
+    top: 0;
+    position: fixed;
+    height: 100pz;
+  }
+  .header nav ul {
+    position: absolute;
+    bottom: -60%;
+    transform: translateX(50%);
+    right: 50%;
+  }
+   .header nav .d-flex .mobile{
+    display: none!important;
+  }
 }

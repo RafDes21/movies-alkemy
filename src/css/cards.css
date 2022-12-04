@@ -9,7 +9,6 @@
   transition: all 0.5s;
   width: 300px;
   height: 160px;
-  
 }
 .cards:hover {
   border-radius: 5px;
@@ -54,3 +53,19 @@
   padding: 2px 5px;
   font-size: 16px;
 }
+
+/* @media screen and (max-width: 768px) {
+  .cards {
+    max-width: 300px;
+    max-height: 320px;
+    min-width: 300px;
+    min-height: 160px;
+    color: #fff;
+    background-color: #181818;
+    overflow: hidden;
+    transition: all 0.5s;
+    width: 200px;
+    height: 130px;
+   
+  }
+} */

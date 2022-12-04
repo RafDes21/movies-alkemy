@@ -45,7 +45,7 @@ const Series = () => {
           {category.length === 0 ? (
             <>
               {listSeries.map((serie, index) => (
-                <div className="col-md-2 my-2">
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 my-5 d-flex justify-content-center">
                   <Card key={index} name={serie.name} img={serie.poster_path} />
                 </div>
               ))}
@@ -53,7 +53,7 @@ const Series = () => {
           ) : (
             <>
               {category.map((item, index) => (
-                <div className="col-md-2 my-5">
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 my-5 d-flex justify-content-center">
                   <Card
                     key={index}
                     name={item.title}

@@ -1,4 +1,5 @@
 import React from "react";
+import {BsLinkedin} from "react-icons/bs"
 
 //styles
 import "../css/footer.css";
@@ -10,13 +11,16 @@ export const Footer = () => {
         <nav>
           <ul>
             <li>
-              <a href="http:/instagram.com" rel="noopener noreferrer">
-                Instagram
+              <a
+                href="www.linkedin.com/in/israelfrontend" target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BsLinkedin/>
               </a>
             </li>
           </ul>
         </nav>
-        <p>Copyright Alkemy Challenge</p>
+        <p>Copyright RafCoder</p>
       </footer>
     </div>
   );

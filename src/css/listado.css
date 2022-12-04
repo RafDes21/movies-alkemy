@@ -37,6 +37,23 @@
 .arrow-right {
   right: 0;
 }
-/* .arrow-left {
-  opacity: 0;
-} */
+
+@media screen and (max-width:768px) {
+  .list-groups {
+    margin-top: -150px;
+    z-index: 2;
+    position: relative;
+  }
+  .arrow {
+    color: #fff;
+    position: absolute;
+    font-size: 30px;
+    padding: 10px;
+    height: 160px;
+    width: 50px;
+    top: 22.5%;
+    z-index: 5;
+    background-color:transparent;
+    cursor: pointer;
+  }
+}

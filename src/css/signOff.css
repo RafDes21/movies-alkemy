@@ -41,5 +41,57 @@
 
 .signOff-body .icon-up {
   font-size: 20px;
-  
+}
+
+@media screen and (max-width: 768px) {
+  .signOff {
+    position: absolute;
+    right: 0;
+    top: 30%;
+  }
+  .signOff-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .signOff-header img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  .signOff-header .icon {
+    font-size: 17px;
+    color: #fff;
+    transition: all 0.5s;
+  }
+  .signOff-body {
+    position: absolute;
+    width: 180%;
+    right: 0;
+    border-radius: 2px;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5;
+  }
+  .signOff-body button {
+    background: none;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.751);
+    padding: 5px 0;
+    width: 100%;
+    color: #fff;
+    font-size: 14px;
+  }
+  .signOff_children {
+    background-color: #010101;
+  }
+  .signOff_children h5 {
+    font-size: 16px;
+  }
+
+  .signOff-body .icon-up {
+    font-size: 20px;
+  }
 }

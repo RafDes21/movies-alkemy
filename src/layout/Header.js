@@ -55,7 +55,7 @@ export const Header = (favoritos) => {
                 </Link>
               </li>
             </ul>
-            <div className="d-flex gap-5 align-items-center">
+            <div className="d-flex gap-5 align-items-center mobile">
               <Buscador />
               <span>
                 <MdFavorite /> {favoritos.props.length}
