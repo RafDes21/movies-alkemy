@@ -11,7 +11,7 @@ export const Footer = () => {
         <nav>
           <ul>
             <li>
-              <a href="www.linkedin.com/in/israelfrontend" target="_blank">
+              <a href="https://linkedin.com/in/israelfrontend/" rel="noreferrer" target="_blank">
                 <BsLinkedin />
               </a>
             </li>
