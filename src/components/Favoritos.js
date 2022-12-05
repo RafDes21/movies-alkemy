@@ -7,7 +7,7 @@ export const Favoritos = (props) => {
       <div className="row">
         {props.favoritos.length > 0 ? (
           props.favoritos.map((favorito, index) => (
-            <div className="col-md-4 col-lg-3 col-12 col-sm-6 py-5" key={index}>
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3 my-5 d-flex justify-content-center py-5" key={index}>
               <div className="card">
                 <img
                   className="card-img-top"

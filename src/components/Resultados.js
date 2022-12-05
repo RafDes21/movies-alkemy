@@ -51,7 +51,7 @@ export const Resultados = () => {
           </div>
         ) : (
           movie.map((movie, index) => (
-            <div className="col-md-2 my-2">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3 my-5 d-flex justify-content-center my-2">
               <Card key={index} name={movie.title} img={movie.poster_path} />
             </div>
           ))
