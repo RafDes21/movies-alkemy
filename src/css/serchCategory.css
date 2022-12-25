@@ -89,7 +89,7 @@
   .categories-list {
     position: absolute;
     height: 0;
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-wrap: wrap;
     background-color: #010101;
@@ -98,7 +98,7 @@
     align-items: center;
     justify-content: center;
     top: 31px;
-    left: 30%;
+    left: 0;
     overflow: hidden;
     transition: all 0.5s;
     border-radius: 2px;
