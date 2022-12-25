@@ -16,9 +16,8 @@ const Series = () => {
   const listSeries = useSelector((state) => state.series.series);
   const category = useSelector((state) => state.series.categories);
   const listCategories = useSelector((state) => state.series.idSeries);
-  console.log(listCategories);
   const ser = useSelector((state) => state.series.serie);
-  console.log(ser);
+
   useEffect(() => {
     dispatch(addSerie());
     dispatch(aSeries());
@@ -45,20 +44,26 @@ const Series = () => {
           {category.length === 0 ? (
             <>
               {listSeries.map((serie, index) => (
-                <div className="col-6 col-sm-6 col-md-4 col-lg-3 my-5 d-flex justify-content-center">
-                  <Card key={index} name={serie.name} img={serie.poster_path} />
+                <div key={index} className="col-6 col-sm-6 col-md-4 col-lg-3 my-5 d-flex justify-content-center">
+                  <Card             
+                    name={serie.name}
+                    img={serie.poster_path}
+                    cate={"serie"}
+                    id={serie.id}
+                  />
                 </div>
               ))}
             </>
           ) : (
             <>
               {category.map((item, index) => (
-                <div className="col-6 col-sm-6 col-md-4 col-lg-3 my-5 d-flex justify-content-center">
+                <div key={index} className="col-6 col-sm-6 col-md-4 col-lg-3 my-5 d-flex justify-content-center">
                   <Card
-                    key={index}
-                    name={item.title}
+                    name={item.original_name}
                     img={item.poster_path}
                     description={item.overview}
+                    id={item.id}
+                    cate={"serie"}
                   />
                 </div>
               ))}

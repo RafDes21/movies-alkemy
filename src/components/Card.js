@@ -1,9 +1,16 @@
 import React from "react";
-import '../css/card.css'
+import "../css/card.css";
+import { useDispatch } from "react-redux";
+import { favorites } from "../features/thunks/favoriteThunks";
 
-const Card = ({ name, img, description }) => {
+const Card = ({ name, img, id,cate, description }) => {
+  const dispatch = useDispatch();
+  const adFavorite = (id, cate) => {
+    dispatch(favorites(id, cate));
+  };
+
   return (
-    <div className="card">
+    <div className="card" onClick={() => adFavorite(id, cate)}>
       <div className="card-img">
         <img src={`https://image.tmdb.org/t/p/w500/${img}`} alt={name} />
       </div>
@@ -15,4 +22,3 @@ const Card = ({ name, img, description }) => {
 };
 
 export default Card;
-        

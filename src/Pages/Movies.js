@@ -18,7 +18,6 @@ export const Movies = () => {
   const category = useSelector((state) => state.movies.allCategories);
   const movie = useSelector((state) => state.movies.movie);
   const movies = useSelector((state) => state.movies.movies);
-  // console.log(category);
 
   const token = sessionStorage.getItem("token");
 
@@ -31,9 +30,6 @@ export const Movies = () => {
   const getId = (id) => {
     dispatch(addCategorys(id));
   };
-  //  console.log(addId());
-  // const addId = (id) => {
-  // };
   const title = "Movies";
   return (
     <div className="movieContainer">
@@ -58,6 +54,8 @@ export const Movies = () => {
                         name={item.title}
                         img={item.poster_path}
                         description={item.overview}
+                        id={item.id}
+                        cate={"movie"}
                       />
                     </div>
                   ))}
@@ -71,6 +69,8 @@ export const Movies = () => {
                         name={item.title}
                         img={item.poster_path}
                         description={item.overview}
+                        id={item.id}
+                        cate={"movie"}
                       />
                     </div>
                   ))}

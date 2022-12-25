@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/head.css";
 
-export const Head = ({ index, img, name, description }) => {
+export const Head = ({ img, name, description }) => {
   return (
     <div className="head">
       <div className="description">

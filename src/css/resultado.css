@@ -3,7 +3,8 @@
 }
 .not{
   position: relative;
-
+  background-color: #181818;
+color: #fff;
 }
 .sinResults {
   display: flex;

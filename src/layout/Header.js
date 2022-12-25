@@ -8,8 +8,13 @@ import "../css/header.css";
 //components
 import Buscador from "../components/Buscador";
 import { SignOff } from "../components/SignOff";
+import { Favoritos } from "../components/Favoritos";
+
+import { useSelector } from "react-redux";
 
 export const Header = (favoritos) => {
+  const favorites = useSelector((state) => state.favorites.favorites);
+  const [favorite, setFavorite] = useState(false);
   const [dinamic, setdinamic] = useState(false);
   const token = sessionStorage.getItem("token");
   const navigate = useNavigate();
@@ -22,6 +27,10 @@ export const Header = (favoritos) => {
       setdinamic(false);
     }
   });
+
+  const show = () => {
+    setFavorite(!favorite);
+  };
 
   return (
     <header
@@ -48,21 +57,23 @@ export const Header = (favoritos) => {
                   Películas
                 </Link>
               </li>
-
-              <li>
-                <Link className="nav-link" to={"/favoritos"}>
-                  Favoritos
-                </Link>
-              </li>
             </ul>
-            <div className="d-flex gap-5 align-items-center mobile">
-              <Buscador />
-              <span>
-                <MdFavorite /> {favoritos.props.length}
+            <div className="d-flex gap-3 align-items-center">
+              <div className="mobile">
+                <Buscador />
+              </div>
+              <span className="header-favorite" onClick={show}>
+                <MdFavorite /> {favorites.length}
               </span>
+
+              <div
+                className="header-favorites__list"
+                style={{ height: favorite ? "200px" : "" }}
+              >
+                <Favoritos />
+              </div>
             </div>
             <SignOff navigate={navigate} />
-     
           </div>
         ) : (
           <></>

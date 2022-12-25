@@ -24,7 +24,7 @@ const Login = () => {
       return;
     }
 
-    if (email !== "israeltineo84@gmail.com" || password !== "react") {
+    if (email !== "prueba@gmail.com" || password !== "react") {
       alert("las credenciales no son correctas");
       return;
     }
@@ -44,11 +44,11 @@ const Login = () => {
               <h2 className="text-center">Iniciar Sesión</h2>
               <div className="d-flex flex-column my-3">
                 <label>Ingrese su email</label>
-                <input type="email" name="email" />
+                <input type="email" name="email" value="prueba@gmail.com" />
               </div>
               <div className="d-flex flex-column my-3">
                 <label>Ingrese su contraseña</label>
-                <input type="password" name="password" />
+                <input type="password" name="password" value="react"/>
               </div>
               <button type="submit">Click</button>
             </form>
